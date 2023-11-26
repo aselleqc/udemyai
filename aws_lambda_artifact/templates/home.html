@@ -1,0 +1,26 @@
+
+{% include 'layout.html' %}
+<div class="container mt-5">
+    <h3>add input to chat with your husband</h3>
+    <form action="/" method="POST">
+        <div>
+             <textarea class="form-control" placeholder="add your input here" name="user_input" rows="3"></textarea>
+            <button class="btn btn-primary mt-1" type="submit">send</button>
+        </div>
+    </form>
+
+    <div>
+    <div class="card text-center mt-3">
+        <div class="card-header">
+            chat history:
+        </div>
+        <div class="card-body">
+            {% for response in chat_responses %}
+            <div>
+               - {{response}}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
